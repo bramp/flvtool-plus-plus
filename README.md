@@ -31,13 +31,13 @@ flvtool++ is used from the command line, so far it has a few simple parameters
 Takes the input file, indexes it and writes it out to the output file. The start and end times may optionally specify timecodes in seconds that are used to chop the FLV file.
 
 ```bash
-flvtool++ &lt;input file&gt; &lt;output file&gt; (&lt;start time&gt; &lt;end time&gt;)
+flvtool++ <input file> <output file> (<start time> <end time>)
 ```
 
 Displays all the metadata and tag information about the input file.
 
 ```bash
-flvtool++ -i &lt;input file&gt;
+flvtool++ -i <input file>
 ```
 
 #### Compiling
@@ -50,7 +50,7 @@ It should also be possible to compile this with other compilers under windows (s
 
 **Linux/FreeBSD:**
 
-flvtool++ compiles cleanly under GCC, a makefile is provided such that you only need to extract the source package, and then type make.
+flvtool++ compiles cleanly under GCC, a makefile is provided such that you only need to extract the source package, and then type `make`.
 
  [1]: http://www.buraks.com/flvmdi/
  [2]: http://rubyforge.org/projects/flvtool2/
@@ -59,6 +59,6 @@ flvtool++ compiles cleanly under GCC, a makefile is provided such that you only 
  [5]: http://www.linux.org/
  [6]: http://www.freebsd.org/
  [7]: http://www.opensource.org/licenses/bsd-license.php
- [8]: /about#contact
+ [8]: https://github.com/bramp/flvtool-plus-plus/issues
  [9]: https://github.com/bramp/flvtool-plus-plus
  
