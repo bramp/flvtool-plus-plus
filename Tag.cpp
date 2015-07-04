@@ -350,7 +350,7 @@ void VideoTag::write(FILE *fp) const {
 
 	Tag::write(fp);
 
-	unsigned char temp = (frame_type << 4 & 0xf0) | codec & 0x0f;
+	unsigned char temp = (frame_type << 4 & 0xf0) | (codec & 0x0f);
 
 	if ( length > 0 ) {
 		fwrite_8(fp, temp);
@@ -500,8 +500,8 @@ void VideoTag::readDimensions(unsigned int &width, unsigned int &height) const {
 			unsigned int pictureSize = read_N( &data[0], 30, 3 );
 
 			switch ( pictureSize ) {
-				case 0: 
-					width = read_N( &data[0], 33, 8 ); 
+				case 0:
+					width = read_N( &data[0], 33, 8 );
 					height= read_N( &data[0], 41, 8 );
 					break;
 				case 1:
@@ -526,6 +526,10 @@ void VideoTag::readDimensions(unsigned int &width, unsigned int &height) const {
 		case VideoTag::ScreenVideo :
 		case VideoTag::ScreenVideo2 :
 			// TODO finish this
+			break;
+
+		case VideoTag::Undefined :
+			// TODO
 			break;
 	}
 }

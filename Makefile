@@ -1,9 +1,9 @@
-#	flvtool++ 0.9
-#	This source is part of flvtool, a generic FLV file editor
-#	Copyright Andrew Brampton, Lancaster University
+# flvtool++
+# This source is part of flvtool, a generic FLV file editor
+# Copyright Andrew Brampton, Lancaster University
 	
-#	This file is released free to use for academic and non-commercial purposes.
-#	If you wish to use this product for commercial reasons, then please contact us
+# This file is released free to use for academic and non-commercial purposes.
+# If you wish to use this product for commercial reasons, then please contact us
 
 
 CPP = g++
@@ -13,7 +13,7 @@ CFLAGS = -g -O0 -c -Wall -D_FILE_OFFSET_BITS=64
 # -g -O0
 # -D_GLIBCPP_CONCEPT_CHECKS
 
-SOURCES =	 flvtool.cpp Tag.cpp AMF.cpp FLV.cpp
+SOURCES = flvtool.cpp Tag.cpp AMF.cpp FLV.cpp common.cpp
 
 OBJECTS=$(SOURCES:.cpp=.o)
 

@@ -101,7 +101,7 @@ void FLVStream::addTagInformation(const Tag & tag ) {
 		case Tag::Audio: {
 			audiotags++;
 
-			if ( videocodec == AudioTag::Undefined ) {
+			if ( audiocodec == AudioTag::Undefined ) {
 				const AudioTag *a = static_cast<const AudioTag*> ( &tag );
 				audiocodec = a->getCodec();
 			}
